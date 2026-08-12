@@ -8,8 +8,13 @@ if [ ! -f "${JUIIT_PATH}" ]; then
 fi
 
 javac -d out -classpath ${JUIIT_PATH} \
-  src/main/java/com/example/bank/model/Account.java
+  src/main/java/com/example/bank/model/Account.java \
+  src/test/java/com/example/bank/model/AccountTest.java \
+  src/main/java/com/example/bank/repository/AccountRepository.java \
+  src/main/java/com/example/bank/repository/InMemoryAccountRepository.java \
+  src/test/java/com/example/bank/repository/InMemoryAccountRepositoryTest.java
 
 java -jar ${JUIIT_PATH} execute \
   --class-path out \
-  --select-class com.example.bank.model.AccountTest
+  --select-class com.example.bank.model.AccountTest \
+  --select-class com.example.bank.repository.InMemoryAccountRepositoryTest
