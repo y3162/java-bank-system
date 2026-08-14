@@ -31,4 +31,9 @@ public class InMemoryAccountRepository implements AccountRepository {
         }
         return account;
     }
+
+    @Override
+    public int getSize() {
+        return this.accountMap.size();
+    }
 }
