@@ -10,6 +10,7 @@ fi
 javac -d out -classpath ${JUIIT_PATH} \
   src/main/java/com/example/bank/exception/AccountNotFoundException.java \
   src/main/java/com/example/bank/exception/AccountAlreadyExistsException.java \
+  src/main/java/com/example/bank/exception/InsufficientFundsException.java \
   src/main/java/com/example/bank/model/Account.java \
   src/test/java/com/example/bank/model/AccountTest.java \
   src/main/java/com/example/bank/repository/AccountRepository.java \
